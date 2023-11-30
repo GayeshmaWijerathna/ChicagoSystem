@@ -1,0 +1,32 @@
+/*Side Button UI Style*/
+.sidebarItem:hover {
+    -fx-background-color: linear-gradient(to right, #ef3b36, #ffffff);
+    -fx-border-color: TRANSPARENT;
+    -fx-border-width: 0px 0px 0px 6px;
+}
+
+/*Side Button UI Style*/
+.popUp:hover {
+    -fx-background-color: linear-gradient(to bottom, #ef3b36, #ffffff);
+    -fx-border-color: transparent;
+    -fx-border-width: 4px 4px 4px 4px;
+}
+
+.order-txt {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 23;
+
+}
+
+.order-BTN {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 20;
+    -fx-background-color: #c50e14;
+    -fx-background-radius: 20;
+}
+
+.promptText {
+    -fx-prompt-text-fill: #D3DEDC;
+}

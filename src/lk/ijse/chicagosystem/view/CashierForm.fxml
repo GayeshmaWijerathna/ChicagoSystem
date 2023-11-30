@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="783.0" prefWidth="1386.0" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chicagosystem.controller.CashierFormController">
+    <children>
+        <ImageView disable="true" fitHeight="783.0" fitWidth="1394.0" layoutY="1.0" pickOnBounds="true"
+                   AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="116.0"
+                   AnchorPane.topAnchor="1.0">
+            <image>
+                <Image url="@../image/gradient.png"/>
+            </image>
+        </ImageView>
+        <GridPane layoutX="15.0" layoutY="169.0" prefHeight="596.0" prefWidth="247.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="276.0" minWidth="10.0" prefWidth="260.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="124.0" minWidth="0.0" prefWidth="8.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="274.0" minHeight="10.0" prefHeight="103.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="274.0" minHeight="0.0" prefHeight="103.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="315.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="308.0" minHeight="0.0" prefHeight="102.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="308.0" minHeight="10.0" prefHeight="108.0" vgrow="SOMETIMES"/>
+                <RowConstraints maxHeight="304.0" minHeight="0.0" prefHeight="80.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <JFXButton fx:id="btnOrder" buttonType="RAISED" onAction="#orderOnAction" prefHeight="94.0"
+                           prefWidth="246.0"
+                           style="-fx-background-color: linear-gradient(to right, #2c3e50, #4ca1af); -fx-background-radius: 23;"
+                           styleClass="sidebarItem" stylesheets="@style/StyleSheet.css" text="Order" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="25.0"/>
+                    </font>
+                    <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                            <stops>
+                                <Stop color="#ff54f0"/>
+                                <Stop color="#ff9136" offset="1.0"/>
+                            </stops>
+                        </RadialGradient>
+                    </ripplerFill>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                </JFXButton>
+                <JFXButton fx:id="btnManageCustomer" buttonType="RAISED" onAction="#manageCustomerOnAction"
+                           prefHeight="94.0" prefWidth="246.0"
+                           style="-fx-background-color: linear-gradient(to right, #2c3e50, #4ca1af); -fx-background-radius: 23;"
+                           styleClass="sidebarItem" stylesheets="@style/StyleSheet.css" text="Manage Customer"
+                           textAlignment="CENTER" textFill="WHITE" wrapText="true" GridPane.rowIndex="2">
+                    <font>
+                        <Font name="System Bold" size="25.0"/>
+                    </font>
+                    <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                            <stops>
+                                <Stop color="#f7d100"/>
+                                <Stop color="WHITE" offset="1.0"/>
+                            </stops>
+                        </RadialGradient>
+                    </ripplerFill>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                </JFXButton>
+                <JFXButton fx:id="btnReserveTable" alignment="CENTER" buttonType="RAISED"
+                           onAction="#reserveTableOnAction" prefHeight="94.0" prefWidth="246.0"
+                           style="-fx-background-color: linear-gradient(to right, #2c3e50, #4ca1af); -fx-background-radius: 23;"
+                           styleClass="sidebarItem" stylesheets="@style/StyleSheet.css" text="Reserve Table"
+                           textAlignment="RIGHT" textFill="WHITE" wrapText="true" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="System Bold" size="25.0"/>
+                    </font>
+                    <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                            <stops>
+                                <Stop color="#28ff11"/>
+                                <Stop color="#ffbc36" offset="1.0"/>
+                            </stops>
+                        </RadialGradient>
+                    </ripplerFill>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                </JFXButton>
+                <JFXButton buttonType="RAISED" onAction="#logOutOnAction" prefHeight="0.0" prefWidth="246.0"
+                           style="-fx-background-color: linear-gradient(to right, #ff4b1f, #ff9068);; -fx-background-radius: 23;"
+                           styleClass="sidebarItem" stylesheets="@style/StyleSheet.css" text="Log Out" textFill="WHITE"
+                           GridPane.rowIndex="5">
+                    <font>
+                        <Font name="System Bold" size="25.0"/>
+                    </font>
+                    <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                            <stops>
+                                <Stop color="#ee0c0c"/>
+                                <Stop color="WHITE" offset="1.0"/>
+                            </stops>
+                        </RadialGradient>
+                    </ripplerFill>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                </JFXButton>
+                <JFXButton fx:id="btnFeedback" alignment="CENTER" buttonType="RAISED" onAction="#feedbackOnAction"
+                           prefHeight="94.0" prefWidth="246.0"
+                           style="-fx-background-color: linear-gradient(to right, #2c3e50, #4ca1af); -fx-background-radius: 23;"
+                           styleClass="sidebarItem" stylesheets="@style/StyleSheet.css" text="Feedback"
+                           textAlignment="RIGHT" textFill="WHITE" wrapText="true" GridPane.rowIndex="4">
+                    <font>
+                        <Font name="System Bold" size="25.0"/>
+                    </font>
+                    <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                            <stops>
+                                <Stop color="#52ff36"/>
+                                <Stop color="WHITE" offset="1.0"/>
+                            </stops>
+                        </RadialGradient>
+                    </ripplerFill>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                </JFXButton>
+                <JFXButton fx:id="btnMenu" buttonType="RAISED" onAction="#manageMenuOnAction" prefHeight="94.0"
+                           prefWidth="246.0"
+                           style="-fx-background-color: linear-gradient(to right, #2c3e50, #4ca1af); -fx-background-radius: 23;"
+                           styleClass="sidebarItem" stylesheets="@style/StyleSheet.css" text="Manage Menu"
+                           textFill="WHITE" GridPane.rowIndex="1">
+                    <font>
+                        <Font name="System Bold" size="25.0"/>
+                    </font>
+                    <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                            <stops>
+                                <Stop color="#15f3ff"/>
+                                <Stop color="WHITE" offset="1.0"/>
+                            </stops>
+                        </RadialGradient>
+                    </ripplerFill>
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                    <effect>
+                        <DropShadow/>
+                    </effect>
+                </JFXButton>
+            </children>
+        </GridPane>
+        <Pane layoutX="8.0" layoutY="6.0" prefHeight="88.0" prefWidth="1384.0"
+              style="-fx-background-color: linear-gradient(to right, #2c3e50, #4ca1af);">
+            <children>
+                <Circle fill="#00ff48" layoutX="244.0" layoutY="45.0" radius="9.0" stroke="BLACK" strokeType="INSIDE"/>
+                <Label fx:id="lblDate1" layoutX="606.0" layoutY="30.0" prefHeight="32.0" prefWidth="216.0"
+                       textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="22.0"/>
+                    </font>
+                </Label>
+                <Text fx:id="txtHour1" fill="WHITE" layoutX="871.0" layoutY="54.0" stroke="WHITE" strokeType="OUTSIDE"
+                      strokeWidth="0.0" wrappingWidth="168.13671875">
+                    <font>
+                        <Font name="System Bold" size="22.0"/>
+                    </font>
+                </Text>
+                <Label layoutX="273.0" layoutY="10.0" prefHeight="71.0" prefWidth="304.0" text="Cashier"
+                       textFill="WHITE">
+                    <font>
+                        <Font name="EngraversGothic BT" size="47.0"/>
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <ImageView fitHeight="146.0" fitWidth="152.0" layoutX="59.0" layoutY="12.0" pickOnBounds="true"
+                   preserveRatio="true">
+            <image>
+                <Image url="@../image/cashier.png"/>
+            </image>
+        </ImageView>
+        <AnchorPane fx:id="miniPane" layoutX="273.0" layoutY="105.0" prefHeight="655.0" prefWidth="1097.0">
+            <children>
+                <AnchorPane fx:id="orderPaneView" layoutX="-7.0" layoutY="-108.0" prefHeight="765.0"
+                            prefWidth="1105.0"/>
+                <AnchorPane fx:id="customerPane" layoutX="-3.0" layoutY="-2.0" prefHeight="668.0" prefWidth="881.0"
+                            visible="false">
+                    <children>
+                        <ImageView fitHeight="673.0" fitWidth="1115.0" layoutX="-1.0" layoutY="-4.0"
+                                   nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true">
+                            <image>
+                                <Image url="@../image/17545.jpg"/>
+                            </image>
+                        </ImageView>
+                        <Label layoutX="327.0" layoutY="34.0" prefHeight="53.0" prefWidth="381.0"
+                               text="Customer Information" AnchorPane.topAnchor="34.0">
+                            <font>
+                                <Font name="Arial Black" size="30.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="57.0" layoutY="122.0" prefHeight="27.0" prefWidth="142.0" text="Customer ID">
+                            <font>
+                                <Font name="Lucida Bright Demibold" size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="57.0" layoutY="162.0" prefHeight="27.0" prefWidth="130.0"
+                               text="Name            ">
+                            <font>
+                                <Font name="Lucida Bright Demibold" size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="57.0" layoutY="200.0" prefHeight="27.0" prefWidth="130.0"
+                               text="Address        ">
+                            <font>
+                                <Font name="Lucida Bright Demibold" size="16.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="57.0" layoutY="236.0" prefHeight="27.0" prefWidth="130.0" text="Contact No   ">
+                            <font>
+                                <Font name="Lucida Bright Demibold" size="16.0"/>
+                            </font>
+                        </Label>
+                        <JFXTextField fx:id="txtcusId" layoutX="184.0" layoutY="118.0" onAction="#cusIDOnAction"
+                                      onKeyTyped="#checkCusID" onMouseEntered="#showOnMpuse"
+                                      onMouseExited="#exitOutMouse" prefHeight="31.0" prefWidth="150.0"
+                                      promptText="Ex:C01" styleClass="promptText" stylesheets="@style/StyleSheet.css"
+                                      AnchorPane.leftAnchor="184.0" AnchorPane.rightAnchor="880.0">
+                            <cursor>
+                                <Cursor fx:constant="TEXT"/>
+                            </cursor>
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtcusName" layoutX="181.0" layoutY="157.0" onAction="#cusNameOnAction"
+                                      onKeyTyped="#checkCusName" prefHeight="31.0" prefWidth="449.0"
+                                      promptText="Ex: A.B.C.Perera" styleClass="promptText"
+                                      stylesheets="@style/StyleSheet.css" AnchorPane.leftAnchor="181.0"
+                                      AnchorPane.rightAnchor="575.0">
+                            <cursor>
+                                <Cursor fx:constant="TEXT"/>
+                            </cursor>
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtcusContact" layoutX="181.0" layoutY="233.0"
+                                      onAction="#cusContactOnAction" onKeyTyped="#checkContact" prefHeight="31.0"
+                                      prefWidth="449.0" promptText="0771234567" styleClass="promptText"
+                                      stylesheets="@style/StyleSheet.css" AnchorPane.leftAnchor="181.0"
+                                      AnchorPane.rightAnchor="575.0">
+                            <cursor>
+                                <Cursor fx:constant="TEXT"/>
+                            </cursor>
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtcusAddress" layoutX="181.0" layoutY="195.0"
+                                      onAction="#cusAddressOnAction" prefHeight="31.0" prefWidth="449.0"
+                                      promptText="Ex: No.101/3, Colombo Rd, Kaluwella, Galle" styleClass="promptText"
+                                      stylesheets="@style/StyleSheet.css" AnchorPane.leftAnchor="181.0"
+                                      AnchorPane.rightAnchor="575.0">
+                            <cursor>
+                                <Cursor fx:constant="TEXT"/>
+                            </cursor>
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </JFXTextField>
+                        <ImageView fitHeight="99.0" fitWidth="154.0" layoutX="181.0" layoutY="12.0" pickOnBounds="true"
+                                   preserveRatio="true" AnchorPane.leftAnchor="181.0" AnchorPane.rightAnchor="799.0">
+                            <image>
+                                <Image url="@../image/customerInfo.png"/>
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="-0.12" contrast="0.05" hue="-0.22" saturation="-0.07"/>
+                            </effect>
+                        </ImageView>
+                        <Label fx:id="lblCusID" layoutX="181.0" layoutY="150.0" prefHeight="17.0" prefWidth="310.0"
+                               textFill="RED"/>
+                        <Label fx:id="lblCusName" layoutX="181.0" layoutY="187.0" prefHeight="17.0" prefWidth="310.0"
+                               textFill="RED"/>
+                        <Label fx:id="lblCusContact" layoutX="180.0" layoutY="266.0" prefHeight="17.0" prefWidth="300.0"
+                               textFill="RED"/>
+                        <GridPane layoutX="170.0" layoutY="277.0" prefHeight="53.0" prefWidth="414.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="227.33331298828125" minWidth="4.0"
+                                                   prefWidth="212.33331298828125"/>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="319.3333740234375" minWidth="10.0"
+                                                   prefWidth="221.66668701171875"/>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="226.6666259765625" minWidth="10.0"
+                                                   prefWidth="158.6666259765625"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                            <children>
+                                <JFXButton fx:id="btnAdd" buttonType="RAISED" onAction="#addCustomerOnAction"
+                                           prefHeight="40.0" prefWidth="115.0"
+                                           style="-fx-background-color: linear-gradient(to right, #0f0c29, #302b63, #24243e);;"
+                                           text="NEW" textFill="WHITE" wrapText="true">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                    <ripplerFill>
+                                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                            <stops>
+                                                <Stop color="#2b4aff"/>
+                                                <Stop color="WHITE" offset="1.0"/>
+                                            </stops>
+                                        </RadialGradient>
+                                    </ripplerFill>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                </JFXButton>
+                                <JFXButton fx:id="btnUpdate" buttonType="RAISED" onAction="#updateCustomerOnAction"
+                                           prefHeight="40.0" prefWidth="115.0"
+                                           style="-fx-background-color: linear-gradient(to right, #f2994a, #f2c94c);;"
+                                           text="Update" textFill="WHITE" wrapText="true" GridPane.columnIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                    <ripplerFill>
+                                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                            <stops>
+                                                <Stop color="#ffd91b"/>
+                                                <Stop color="WHITE" offset="1.0"/>
+                                            </stops>
+                                        </RadialGradient>
+                                    </ripplerFill>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                </JFXButton>
+                                <JFXButton fx:id="btnDelete" buttonType="RAISED" onAction="#deleteCustomerOnAction"
+                                           prefHeight="40.0" prefWidth="115.0"
+                                           style="-fx-background-color: linear-gradient(to right, #f85032, #e73827);;"
+                                           text="Delete" textFill="WHITE" wrapText="true" GridPane.columnIndex="2">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                    <ripplerFill>
+                                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                            <stops>
+                                                <Stop color="#ff422b"/>
+                                                <Stop color="WHITE" offset="1.0"/>
+                                            </stops>
+                                        </RadialGradient>
+                                    </ripplerFill>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                </JFXButton>
+                            </children>
+                        </GridPane>
+                        <TableView fx:id="tblCustomerDetails" layoutX="19.0" layoutY="354.0" prefHeight="291.0"
+                                   prefWidth="845.0">
+                            <columns>
+                                <TableColumn fx:id="col1CusID" prefWidth="121.0" text="Customer ID"/>
+                                <TableColumn fx:id="col2CusName" prefWidth="199.0" text="Customer Name"/>
+                                <TableColumn fx:id="col3CusAddress" prefWidth="363.0" text="Address"/>
+                                <TableColumn fx:id="col4CusContact" prefWidth="161.0" text="Contact No"/>
+                            </columns>
+                        </TableView>
+                        <Button fx:id="btnclearTextFields" layoutX="340.0" layoutY="123.0" mnemonicParsing="false"
+                                onAction="#clearOnAction" prefHeight="25.0" prefWidth="74.0"
+                                style="-fx-border-color: yellow;" text="Clear Fields" visible="false">
+                            <font>
+                                <Font size="11.0"/>
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </Button>
+                        <Pane fx:id="showIntroPane" layoutX="291.0" layoutY="87.0" prefHeight="53.0" prefWidth="204.0"
+                              style="-fx-background-color: #f7ffa4; -fx-border-color: red;" visible="false">
+                            <children>
+                                <Text layoutX="13.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                                      text=" Type Customer ID in This field and Press ' Enter Button ' to Search"
+                                      wrappingWidth="177.77343568392098"/>
+                            </children>
+                        </Pane>
+                        <ImageView fx:id="btnRefresh" fitHeight="29.0" fitWidth="33.0" layoutX="87.0" layoutY="51.0"
+                                   onMouseClicked="#reFreshOnClick" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../image/reFresh.png"/>
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </ImageView>
+                        <Group layoutX="626.0" layoutY="86.0">
+                            <children>
+                                <TextField fx:id="txtSearchfield" layoutX="7.0" layoutY="1.0" onAction="#searchOnAction"
+                                           prefHeight="25.0" prefWidth="204.0" promptText="    Search..."/>
+                                <ImageView accessibleRole="BUTTON" fitHeight="32.0" fitWidth="29.0" layoutX="191.0"
+                                           layoutY="-2.0" onMouseClicked="#searchOnAction2" pickOnBounds="true"
+                                           preserveRatio="true">
+                                    <image>
+                                        <Image url="@../image/search1.png"/>
+                                    </image>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                    <effect>
+                                        <ColorAdjust contrast="0.07" hue="0.95"/>
+                                    </effect>
+                                </ImageView>
+                            </children>
+                        </Group>
+                        <JFXButton fx:id="btnClose" buttonType="RAISED" layoutX="1021.0" layoutY="20.0"
+                                   onAction="#closeOnAction" prefHeight="18.0" prefWidth="41.0" ripplerFill="#fffb0c"
+                                   style="-fx-background-color: #C0392B; -fx-background-radius: 12;" text="X"
+                                   textFill="WHITE" visible="false">
+                            <font>
+                                <Font name="System Bold" size="18.0"/>
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                        </JFXButton>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="tableReservationPane" layoutX="13.0" prefHeight="661.0" prefWidth="1099.0"
+                            visible="false">
+                    <children>
+                        <Pane prefHeight="646.0" prefWidth="1110.0">
+                            <children>
+                                <TableView fx:id="tblTableReservation" editable="true" fixedCellSize="0.0"
+                                           layoutX="70.0" layoutY="257.0" prefHeight="392.0" prefWidth="867.0">
+                                    <columns>
+                                        <TableColumn fx:id="tblTableReservationColCustId" prefWidth="134.66665649414062"
+                                                     text="Customer ID"/>
+                                        <TableColumn fx:id="tblTableReservationColTableNo" minWidth="0.0"
+                                                     prefWidth="93.0" text="Table No"/>
+                                        <TableColumn fx:id="tblTableReservationColNoOfSeats" minWidth="0.0"
+                                                     prefWidth="102.33331298828125" text="No Of Seats"/>
+                                        <TableColumn fx:id="tblTableReservationColCusName" minWidth="0.0"
+                                                     prefWidth="256.66668701171875" text="Customer Name"/>
+                                        <TableColumn fx:id="tblTableReservationColReservationStatus"
+                                                     prefWidth="109.333251953125" text="Reservation Status"/>
+                                        <TableColumn fx:id="tblTableReservationColReservedDate"
+                                                     prefWidth="171.666748046875" text="Reserved Date"/>
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                                    </columnResizePolicy>
+                                </TableView>
+                                <Label layoutX="477.0" layoutY="39.0" text="Table Reservation">
+                                    <font>
+                                        <Font name="System Bold" size="19.0"/>
+                                    </font>
+                                </Label>
+                                <JFXButton fx:id="btnReserve" buttonType="RAISED" layoutX="818.0" layoutY="210.0"
+                                           onAction="#ReserveOnAction" prefHeight="29.0" prefWidth="127.0"
+                                           ripplerFill="#38ff89"
+                                           style="-fx-background-color: linear-gradient(to right, #000428, #004e92);;"
+                                           text="Reserve" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                </JFXButton>
+                                <JFXButton fx:id="btnRemove" buttonType="RAISED" layoutX="626.0" layoutY="210.0"
+                                           onAction="#RemoveOnAction" prefHeight="31.0" prefWidth="108.0"
+                                           ripplerFill="#ff3737"
+                                           style="-fx-background-color: linear-gradient(to right, #ed213a, #93291e);;"
+                                           text="Remove" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="15.0"/>
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                </JFXButton>
+                                <ComboBox fx:id="cmbTableNo" layoutX="70.0" layoutY="154.0"
+                                          onAction="#selectOnActionComboBox" prefHeight="25.0" prefWidth="142.0"
+                                          promptText="Select"/>
+                                <TextField fx:id="txtCusContact" layoutX="274.0" layoutY="151.0"
+                                           onAction="#searchCusContactOnAction" prefHeight="26.0" prefWidth="193.0">
+                                    <font>
+                                        <Font size="14.0"/>
+                                    </font>
+                                </TextField>
+                                <Label layoutX="276.0" layoutY="133.0" text="Customer ID or Contact No"/>
+                                <JFXButton buttonType="RAISED" layoutX="70.0" layoutY="73.0" onAction="#addNewCustomer"
+                                           prefHeight="29.0" prefWidth="127.0" ripplerFill="#38ff89"
+                                           style="-fx-background-color: linear-gradient(to right, #000000, #0f9b0f);;"
+                                           text="New Customer" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                </JFXButton>
+                                <TextField fx:id="txtCusName" layoutX="529.0" layoutY="151.0"
+                                           onAction="#searchCusNameOnAction" prefHeight="26.0" prefWidth="193.0">
+                                    <font>
+                                        <Font size="14.0"/>
+                                    </font>
+                                </TextField>
+                                <Label layoutX="530.0" layoutY="132.0" text="Customer Name"/>
+                                <Label layoutX="70.0" layoutY="135.0" text="Table No"/>
+                                <JFXDatePicker fx:id="datePicker" defaultColor="#03435e" layoutX="803.0" layoutY="152.0"
+                                               prefHeight="25.0" prefWidth="193.0"
+                                               promptText="Reserve Date">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                </JFXDatePicker>
+                                <Label fx:id="lbltblReserveCusID" layoutX="276.0" layoutY="185.0" prefHeight="43.0"
+                                       prefWidth="190.0" wrapText="true"/>
+                                <Text fx:id="txtNoOfSeats" layoutX="159.0" layoutY="214.0" strokeType="OUTSIDE"
+                                      strokeWidth="0.0" text="0">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                </Text>
+                                <Text fx:id="txtNoOfSeats1" layoutX="70.0" layoutY="214.0" strokeType="OUTSIDE"
+                                      strokeWidth="0.0" text="Can be Seated          Perons"
+                                      wrappingWidth="193.00000980496407"/>
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+                <ImageView fx:id="imgWelcome" disable="true" fitHeight="666.0" fitWidth="794.0" layoutX="174.0"
+                           pickOnBounds="true">
+                    <image>
+                        <Image url="@../image/restaurant1.png"/>
+                    </image>
+                </ImageView>
+                <AnchorPane fx:id="feedbackPane" layoutX="2.0" prefHeight="678.0" prefWidth="1120.0" visible="false">
+                    <children>
+                        <Pane prefHeight="680.0" prefWidth="1116.0" style="-fx-background-color: #E5E7E9;">
+                            <children>
+                                <JFXButton fx:id="btnskipButton" buttonType="RAISED" layoutX="854.0" layoutY="595.0"
+                                           onAction="#skipOnAction" prefHeight="44.0" prefWidth="184.0"
+                                           style="-fx-background-color: #40E0D0; -fx-background-radius: 18; -fx-border-radius: 18; -fx-border-color: red;"
+                                           text="SKIP &gt;&gt;&gt;" textFill="WHITE" visible="false">
+                                    <ripplerFill>
+                                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                            <stops>
+                                                <Stop color="#ff1f1f"/>
+                                                <Stop color="WHITE" offset="1.0"/>
+                                            </stops>
+                                        </RadialGradient>
+                                    </ripplerFill>
+                                    <font>
+                                        <Font name="System Bold" size="18.0"/>
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                    <effect>
+                                        <DropShadow/>
+                                    </effect>
+                                </JFXButton>
+                            </children>
+                        </Pane>
+                        <TextArea fx:id="txtDescription" layoutX="37.0" layoutY="150.0" prefHeight="267.0"
+                                  prefWidth="494.0" promptText="Customer Feedback - Type Here" scrollTop="5.0"
+                                  wrapText="true">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </TextArea>
+                        <TextField fx:id="txtfbTitle" layoutX="37.0" layoutY="84.0" prefHeight="32.0" prefWidth="494.0"
+                                   promptText="Good One or Bad one">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </TextField>
+                        <Text layoutX="37.0" layoutY="456.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ratings"
+                              wrappingWidth="70.00000134110451">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Text>
+                        <TextField fx:id="txtRating" layoutX="37.0" layoutY="467.0" prefHeight="32.0" prefWidth="70.0"
+                                   promptText="1-10">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </TextField>
+                        <Text layoutX="37.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description"
+                              wrappingWidth="126.99998989701271">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Text>
+                        <Text layoutX="37.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Feedback Title"
+                              wrappingWidth="126.99998989701271">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Text>
+                        <JFXButton buttonType="RAISED" layoutX="391.0" layoutY="464.0" onAction="#submitOnAction"
+                                   prefWidth="88.0"
+                                   style="-fx-background-color: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);;"
+                                   text="Submit" textFill="WHITE">
+                            <ripplerFill>
+                                <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                    <stops>
+                                        <Stop color="#877eff"/>
+                                        <Stop color="WHITE" offset="1.0"/>
+                                    </stops>
+                                </RadialGradient>
+                            </ripplerFill>
+                            <cursor>
+                                <Cursor fx:constant="HAND"/>
+                            </cursor>
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </JFXButton>
+                        <TableView fx:id="tblFeedback" layoutX="579.0" layoutY="36.0" prefHeight="478.0"
+                                   prefWidth="484.0">
+                            <columns>
+                                <TableColumn fx:id="tblFeedbackNo" prefWidth="85.0" text="Feedback No"/>
+                                <TableColumn fx:id="tblFeedbackType" minWidth="5.0" prefWidth="104.0"
+                                             text="FeedBack Type"/>
+                                <TableColumn fx:id="tblFeedbackDescription" minWidth="5.0" prefWidth="215.0"
+                                             text="Description"/>
+                                <TableColumn fx:id="tblFeedbackRate" minWidth="5.0" prefWidth="79.0" text="Rate"/>
+                            </columns>
+                        </TableView>
+                        <JFXTextField fx:id="txtfbNo" layoutX="140.0" layoutY="24.0" prefHeight="25.0" prefWidth="86.0">
+                            <font>
+                                <Font name="System Bold" size="12.0"/>
+                            </font>
+                        </JFXTextField>
+                        <Text fx:id="txtoId" layoutX="37.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="Feedback No" wrappingWidth="126.99998989701271">
+                            <font>
+                                <Font size="16.0"/>
+                            </font>
+                        </Text>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="menuPane" layoutX="-3.0" layoutY="-4.0" prefHeight="680.0" prefWidth="1122.0"
+                            visible="false">
+                    <children>
+                        <Pane prefHeight="664.0" prefWidth="1112.0" style="-fx-background-color: white;">
+                            <children>
+                                <Label layoutX="467.0" layoutY="46.0" text="Manage Menu">
+                                    <font>
+                                        <Font name="System Bold" size="24.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtMenuItemNo" layoutX="63.0" layoutY="142.0" onAction="#tfItemCode"
+                                           prefHeight="26.0" prefWidth="193.0"/>
+                                <TextField fx:id="txtMenuItemName" layoutX="315.0" layoutY="141.0" prefHeight="26.0"
+                                           prefWidth="193.0"/>
+                                <TextField fx:id="txtPrice" layoutX="566.0" layoutY="141.0" prefHeight="26.0"
+                                           prefWidth="193.0"/>
+                                <Label layoutX="64.0" layoutY="122.0" text="Item Code"/>
+                                <Label layoutX="317.0" layoutY="122.0" text="Item Name"/>
+                                <Label layoutX="567.0" layoutY="122.0" text="Price per One"/>
+                                <ComboBox fx:id="cmbCategory" layoutX="827.0" layoutY="140.0" prefWidth="150.0"
+                                          promptText="Select"/>
+                                <Label layoutX="827.0" layoutY="122.0" text="Category"/>
+                                <TableView fx:id="tblManageMenu" layoutX="126.0" layoutY="220.0" prefHeight="348.0"
+                                           prefWidth="755.0">
+                                    <columns>
+                                        <TableColumn fx:id="colItemCode" prefWidth="154.0" text="Menu ItemNo"/>
+                                        <TableColumn fx:id="colItemName" prefWidth="227.0" text="Menu Item Name"/>
+                                        <TableColumn fx:id="colItemPrice" prefWidth="182.0" text="Price per One"/>
+                                        <TableColumn fx:id="colItemCategory" prefWidth="191.0" text="Category"/>
+                                    </columns>
+                                </TableView>
+                                <JFXButton fx:id="btnNewMenu" buttonType="RAISED" layoutX="58.0" layoutY="52.0"
+                                           onAction="#addNewtoMenu" prefHeight="26.0" prefWidth="66.0"
+                                           style="-fx-background-color: green; -fx-background-radius: 22;" text="NEW"
+                                           textFill="WHITE">
+                                    <ripplerFill>
+                                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                            <stops>
+                                                <Stop color="#ff2f2f"/>
+                                                <Stop color="WHITE" offset="1.0"/>
+                                            </stops>
+                                        </RadialGradient>
+                                    </ripplerFill>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                </JFXButton>
+                                <JFXButton buttonType="RAISED" layoutX="736.0" layoutY="589.0"
+                                           onAction="#updateOnAction" prefHeight="26.0" prefWidth="66.0"
+                                           ripplerFill="#50e8ff"
+                                           style="-fx-background-color: yellow; -fx-background-radius: 22;"
+                                           text="Update">
+                                    <font>
+                                        <Font name="System Bold" size="12.0"/>
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                </JFXButton>
+                                <JFXButton buttonType="RAISED" layoutX="836.0" layoutY="589.0"
+                                           onAction="#deleteOnAction" prefHeight="26.0" prefWidth="66.0"
+                                           ripplerFill="#61ffef"
+                                           style="-fx-background-color: red; -fx-background-radius: 22;" text="Delete"
+                                           textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="12.0"/>
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                </JFXButton>
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

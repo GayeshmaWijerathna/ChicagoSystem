@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.*?>
+<AnchorPane prefHeight="103.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.chicagosystem.controller.FastFoodBarController">
+    <children>
+        <Pane layoutX="3.0" layoutY="4.0" prefHeight="83.0" prefWidth="193.0"
+              style="-fx-background-color: #CB4335; -fx-background-radius: 30;">
+            <children>
+                <Text fx:id="itemName" fill="WHITE" layoutX="27.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="Fast Food">
+                    <font>
+                        <Font name="System Bold" size="21.0"/>
+                    </font>
+                </Text>
+                <Text fill="WHITE" layoutX="40.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Text>
+                <Text fx:id="txtPrice" fill="WHITE" layoutX="94.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                      text="00.00" wrappingWidth="103.00000894069672">
+                    <font>
+                        <Font size="18.0"/>
+                    </font>
+                </Text>
+                <RadioButton fx:id="rBtnFastfood" layoutX="16.0" layoutY="1.0" mnemonicParsing="false"
+                             onAction="#fastFoodOnAction" prefHeight="80.0" prefWidth="172.0" text=" " visible="false"/>
+                <Text fx:id="lblIDFastFood" fill="WHITE" layoutX="111.0" layoutY="81.0" strokeType="OUTSIDE"
+                      strokeWidth="0.0" text="id" wrappingWidth="66.8037109375">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Text>
+            </children>
+        </Pane>
+        <RadioButton fx:id="rBtnFastFood" layoutX="9.0" layoutY="4.0" mnemonicParsing="false"
+                     onAction="#fastFoodOnAction" prefHeight="95.0" prefWidth="183.0" text=" "/>
+    </children>
+</AnchorPane>
